@@ -1,7 +1,13 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    margin: 0 5%;
+    border-bottom: 1px solid hsl(242, 242, 242);
+    padding: 20px 0;
 }
 
 ul{
@@ -9,33 +15,27 @@ ul{
 }
 
 section{
-    padding: 0;
+    padding: 0 5%;
 }
 
-section ul{
+section div ul:first-child{
+    display: flex;
+    background-color: rgb(242, 242, 242);
+}
+
+section div ul:first-child li{
+    padding: 20px;
+}
+
+section div ul:first-child li{
+    border: 1px solid rgb(219, 219, 219);
+}
+
+section article ul li{
     display: grid;
-    row-gap: 10px;
+    grid-template-columns: repeat(2,1fr);
 }
 
-section ul span{
-    background-color: rgb(212, 212, 212);
-    display: grid;
-    padding: 14px 10px;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-section ul span b{
-    justify-self: end;
-}
-
-section ul li{
-    cursor: pointer;
-}
-
-section ul li p{
-    display: none;
-}
-
-section ul li.active p{
-    padding: 10px;
+section p{
+    display: center;
 }
